@@ -1,0 +1,13 @@
+.container {
+  margin: 10px 20px;
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-content: cetner;
+  font-size: 24px;
+  font-style: bold;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+}

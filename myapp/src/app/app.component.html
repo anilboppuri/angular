@@ -1,0 +1,75 @@
+<div class="container">Color Component</div>
+<input type="text" (keydown)="keyCapture($event.key)" />
+
+<h2><button (click)="sendMessage()">click</button></h2>
+<title>{{title}}</title>
+<!-- <div class="container" style="border: solid 2px blue">
+  <h2>Product Data</h2>
+
+  <p>Product Id: {{ productId }}</p>
+  <p>Description: {{ description }}</p>
+  <p>Instock : {{ available }}</p>
+  <p>
+    Enter order quantity:
+    <input
+      type="text"
+      name="orderqty"
+      id=""
+      [(ngModel)]="orderqty"
+      #inputqty
+    />{{ orderqty }}
+  </p>
+
+  <div [ngSwitch]="inputqty.value">
+    <span *ngSwitchCase="201">..Qty Not Available .</span>
+    <span *ngSwitchCase="200">..Exact Qty Available .</span>
+    <span *ngSwitchCase="199">..Full Qty Available .</span>
+    <span *ngSwitchDefault>.Check your input .</span>
+  </div>
+
+  Delivery :
+  <span [style.background-color]="deliverColor">
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span
+  >
+  <div [innerHTML]="isorderedQtyAvailable"></div>
+  -
+  <div [innerHTML]="serviceTimings"></div>
+  <p>
+    <button name="placeOrder" (click)="printOrder(inputqty.value)">
+      PlaceOrder
+    </button>
+  </p>
+
+  <div *ngIf="qty > orderqty; else myTemplate">Ordered Quantiy Available</div>
+
+  <ng-template #myTemplate> Ordered Quantiy Not Available </ng-template>
+
+  <p>{{ orderDate | date : "dd/MMMM/yyyy" }}</p>
+
+  <div *ngFor="let product of products; index as i; even as isEven">
+    <span *ngIf="isEven; else template" [style.background-color]="evenColor">
+      {{ i }}
+      {{ product.productId }}
+      {{ product.description }}
+      {{ product.price }}
+    </span>
+    <ng-template #template>
+      <span [style.background-color]="oddColor">
+        {{ i }}
+        {{ product.productId }}
+        {{ product.description }}
+        {{ product.price }}
+      </span>
+    </ng-template>
+  </div>
+</div>
+<div style="border: solid 2px green">
+  <app-color></app-color>
+</div>
+<div style="border: solid 2px rgb(183, 74, 2)">
+  <app-data></app-data>
+</div> -->
+<h1>Parent component</h1>
+<app-color [title]="title">
+  This is demonstrating After Content Init
+</app-color>
